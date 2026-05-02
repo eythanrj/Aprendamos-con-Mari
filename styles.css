@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fdfaf6;
+  color: #374151;
+}
+
+/* NAV */
+.nav {
+  padding: 15px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #fbcfe8, #e0f2fe);
+  padding: 80px 20px;
+  background-attachment: fixed;
+}
+
+/* CONTENEDOR */
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px 20px;
+}
+
+.gray {
+  background: #f8fafc;
+}
+
+/* PERFIL */
+.profile {
+  width: 120px;
+  border-radius: 50%;
+}
+
+/* BOTÓN */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 25px;
+  background: #f472b6;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 300px;
+}
+
+/* 🔥 SLIDER ULTRA */
+.slider {
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+
+.slider:active {
+  cursor: grabbing;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+}
+
+.slider-track img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* 3D */
+.slider-track img:hover {
+  transform: perspective(800px) rotateY(10deg) scale(1.1);
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #fbcfe8, #ddd6fe);
+  padding: 60px 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ANIMACIONES */
+.fade {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  filter: blur(6px);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
